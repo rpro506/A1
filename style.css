@@ -1,0 +1,72 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #B266B2;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #CF9FFF;
+}
+
+.sidebar header {
+    font-size: 34px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+}
+
+.sidebar img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    width: 50%;
+}
+
+.sidebar ul a{
+    display: block;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+    box-sizing: border-box;
+    transition: .4s;
+}
+
+ul li:hover a{
+    background-color: #DA70D6;
+}
+
+.home h1{
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #B266B2;
+}
+
+.home p{
+    color: black;
+    text-align: left;
+    padding-left: 260px;
+    padding-top: 10px;
+    font-size: 25px;
+}
+
+.gamesIMG img{
+    display: block;
+    width: 40%;
+    padding-left: 1100px;
+    padding-top: 250px;
+}
