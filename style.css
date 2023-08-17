@@ -1,7 +1,9 @@
-body {
-    font-family:'Times New Roman', Times, serif;
-    background-color: #B266B2;
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #25274d;
+
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -11,25 +13,20 @@ body {
 
 .sidebar {
     position: fixed;
-    left: 0;
-    width: 250px;
+    left: -250px;
+    width: 200px;
     height: 100%;
-    background: #CF9FFF;
+    background: #464866;
+    transition: all .4s ease;
 }
 
-.sidebar header {
-    font-size: 34px;
+.sidebar header{
+    font-size: 40px;
     color: white;
     text-align: center;
-    line-height: 70px;
-}
-
-.sidebar img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 40px;
-    width: 50%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    line-height: 50px;
 }
 
 .sidebar ul a{
@@ -37,36 +34,58 @@ body {
     text-align: center;
     height: 100%;
     width: 100%;
-    line-height: 40px;
-    font-size: 20px;
+    line-height: 50px;
+    border-top: 2px solid black;
+    border-bottom: #AAABB8;
     color: white;
     box-sizing: border-box;
     transition: .4s;
 }
 
-ul li:hover a{
-    background-color: #DA70D6;
+.sidebar ul li:hover a{
+    background: #29648a;
+    padding-left: 5px;
 }
 
-.home h1{
-    display: block;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #B266B2;
+#check {
+    display: none;
 }
 
-.home p{
-    color: black;
-    text-align: left;
-    padding-left: 260px;
-    padding-top: 10px;
-    font-size: 25px;
+label #button, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #464866;
 }
 
-.gamesIMG img{
-    display: block;
-    width: 40%;
-    padding-left: 1100px;
-    padding-top: 250px;
+label #button{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .4s;
+}
+
+label #cancel{
+    z-index: 1111;
+    left: -150px;
+    top: 10px;
+    font-size: 15px;
+    color: white;
+    padding: 4px 9px;
+    transition: all 0.4s ease;
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~ label #button{
+    left: 200px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+    left: 150px;
 }
